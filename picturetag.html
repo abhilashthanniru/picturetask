@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice Picture and Forms</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+    }
+    form {
+      margin-top: 20px;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Practice: Picture and Forms</h1>
+
+  <!-- Picture Tag Example -->
+  <section>
+    <h2>Responsive Image with <picture> Tag</h2>
+    <picture>
+      <source srcset="https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg" media="(min-width: 800px)">
+      <source srcset="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtnvAOajH9gS4C30cRF7rD_voaTAKly2Ntaw&s" media="(min-width: 500px)">
+      <img src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg" alt="Example Image" style="width:100%;">
+    </picture>
+    <p>The image changes based on screen size. Try resizing your browser!</p>
+  </section>
+
+  <!-- Form Example -->
+  <section>
+    <h2>Form with Options and Datalist</h2>
+    <form action="process-form.php" method="post">
+      <!-- Dropdown menu -->
+      <label for="options">Choose an option:</label>
+      <select name="options" id="options">
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+      </select>
+
+      <!-- Datalist example -->
+      <label for="browser">Choose a browser:</label>
+      <input list="browsers" id="browser" name="browser">
+      <datalist id="browsers">
+        <option value="Google Chrome">
+        <option value="Mozilla Firefox">
+        <option value="Safari">
+        <option value="Microsoft Edge">
+        <option value="Opera">
+      </datalist>
+
+      <!-- Text input -->
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <!-- Submit and formaction example -->
+      <button type="submit">Submit Form</button>
+      <button type="submit" formaction="alternate-process.php">Submit to Alternate Action</button>
+    </form>
+  </section>
+</body>
+</html>
